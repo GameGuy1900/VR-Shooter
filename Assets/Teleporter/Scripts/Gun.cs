@@ -20,7 +20,8 @@ public class Gun : MonoBehaviour
     public GameObject reloadText;
     public Text ammoText;
 
-    public Animation anim;
+    public Animation animScoped;
+    public Animation animIdle;
 
     //public Camera mainCamera;
     //public Camera aimCamera;
@@ -87,6 +88,11 @@ public class Gun : MonoBehaviour
             Aim();
         }
 
+        if (OVRInput.GetUp(OVRInput.Button.Back))
+        {
+            Idle();
+        }
+
         ammoText.text = "Ammo: " + currentAmmo;
     }
 
@@ -107,8 +113,17 @@ public class Gun : MonoBehaviour
 
     void Aim()
     {
-        anim = GetComponent<Animation>();
-        foreach (AnimationState state in anim)
+        animScoped = GetComponent<Animation>();
+        foreach (AnimationState state in animScoped)
+        {
+            state.speed = 0.5F;
+        }
+    }
+
+    void Idle()
+    {
+        animIdle = GetComponent<Animation>();
+        foreach (AnimationState state in animIdle)
         {
             state.speed = 0.5F;
         }
