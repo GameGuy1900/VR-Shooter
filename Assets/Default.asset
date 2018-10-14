@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0026d054b09984a95940c57e4c7930, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  weaponName: Medium
+  cost: 50
+  description: Medium range, damage, fire rate
+  fireRate: 0.3
+  damage: 10
+  range: 50
