@@ -1,1 +1,1 @@
-VR-Shooter
+VR-Shooter for Oculus Go
